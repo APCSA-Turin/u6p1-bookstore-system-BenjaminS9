@@ -1,50 +1,53 @@
 package com.example.project;
 
 public class User{
-    //requires 3 private attributes String name, String Id, Book book that is initialized to empty
     private String name;
     private String Id;
-    private Book[] books;
-    //requires 1 contructor with two parameters that will initialize the name and id
+    private Book[] books = new Book[5];
+    //initializes name and id
     public User(String name, String Id) {
         this.name = name;
         this.Id = Id;
     } 
-    // public  getName() {}
+    // returns the name of the user
     public String getName() {
         return name;
     }
-    // public  setName() {}
+    //sets the name of the user to newName
     public void setName(String newName) {
         name = newName;
     }
-    // public  getId() {}
+    //returns the id of the user
     public String getId() {
         return Id;
     }
-    // public void setId() {}
+    //sets the id of the user to newId
     public void setId(String newId) {
         Id = newId;
     }
-    // public getBooks() {}
-    public Book getBooks() {
+    //returns each book of the books array
+    public Book[] getBooks() {
         return books;
     }
-    // public setBooks() {}
+    //sets the books array to a book array called newBooks
     public void setBooks(Book[] newBooks) {
         books = newBooks;
     }
-    // public String bookListInfo(){} //returns a booklist for the user, if empty, output "empty"
+    //returns a string containing a list of the info of the books owned by the user
+    //if a book in the user's book list is null, the String states that it is "empty" instead
     public String bookListInfo() {
         String returnString = "";
         for (Book book : books) {
             if (book == null) {
-                
+                returnString += "empty\n";
+            } else {
+                returnString += book.bookInfo() + "\n";
             }
         }
+        return returnString;
     }
-    // public String userInfo(){} //returns  "Name: []\nID: []\nBooks:\n[]"
+    //returns a string containing the user's name, ID, and list of books
     public String userInfo() {
-        return "Name: " + name + "\nID: " + Id + "\nBooks:\n" + books;
+        return "Name: " + name + "\nId: " + Id + "\nBooks: \n" + bookListInfo();
     }
 }

@@ -1,13 +1,13 @@
 package com.example.project;
 
 public class Book{
-    //requires 5 attributes String title, String author, int yearPublished, String isbn, int quantity
     private String title;
     private String author;
     private int yearPublished;
     private String isbn;
     private int quantity;
-    //requires 1 constructor with 5 arguments that intitialize the attribtues of the class.
+    
+    //initializes the attributes of a Book object to the given parameters
     public Book (String title, String author, int yearPublished, String isbn, int quantity) {
         this.title = title;
         this.author = author;
@@ -15,47 +15,47 @@ public class Book{
         this.isbn = isbn;
         this.quantity = quantity;
     }
-    // public  getTitle() {}
+    //returns the title of the the book
     public String getTitle() {
         return title;
     }
-    // public setTitle() {}
+    //sets the title of the book to newTitle
     public void setTitle(String newTitle) {
         title = newTitle;
     }
-    // public getAuthor() {}
+    //returns the author of the book
     public String getAuthor() {
         return author;
     }
-    // public setAuthor() {}
+    //sets the author of the book to newAuthor
     public void setAuthor(String newAuthor) {
         author = newAuthor;
     }
-    // public getYearPublished() {}
+    //returns the publication year of the book
     public int getYearPublished() {
         return yearPublished;
     }
-    // public setYearPublished() {}
+    //sets the publication year of the book to newYearPublished
     public void setYearPublished(int newYearPublished) {
         yearPublished = newYearPublished;
     }
-    // public getIsbn() {}
+    //returns the isbn of the book
     public String getIsbn() {
         return isbn;
     }
-    // public void setIsbn() {}
+    //sets the isbn of the book to newIsbn
     public void setIsbn(String newIsbn) {
         isbn = newIsbn;
     }
-    // public int getQuantity() {}
+    //returns the quantity of the book
     public int getQuantity() {
         return quantity;
     }
-    // public void setQuantity() {}
+    //sets the quantity of the book to newQuantity
     public void setQuantity(int newQuantity) {
         quantity = newQuantity;
     }
-    // public  bookInfo(){} //returns "Title: [], Author: [], Year: [], ISBN: [], Quantity: []"
+    //returns a string that contains the title, author, publication year, ISBN, and quantity of a specific book
     public String bookInfo() {
         String titleString = "Title: " + title + ", ";
         String authorString = "Author: " + author + ", ";
